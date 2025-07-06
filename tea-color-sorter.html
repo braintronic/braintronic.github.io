@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Color Sorter Machines | Braintronics Engineering</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', Arial, sans-serif; margin: 0; background: #102542; color: #f7faff; }
+        header { background: linear-gradient(90deg, #0072c6 60%, #00b4d8 100%); color: #fff; padding: 48px 0 32px 0; text-align: center; margin-top: 60px; }
+        .logo {
+            width: 140px;
+            height: 140px;
+            display: inline-block;
+            margin-bottom: 10px;
+            background-image: url('bt logo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        nav.topnav {
+            width: 100%;
+            background: none;
+            text-align: right;
+            padding: 24px 40px 0 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 100;
+        }
+        nav.topnav a {
+            color: #00b4d8;
+            text-decoration: none !important;
+            margin-left: 24px;
+            font-weight: 700;
+            font-size: 1.08em;
+            transition: color 0.2s, background 0.2s;
+        }
+        nav.topnav a.active,
+        nav.topnav a:hover {
+            background: #00b4d8;
+            color: #fff;
+            border-radius: 6px;
+            padding: 6px 16px;
+            font-weight: bold;
+            text-decoration: none !important;
+        }
+        .container { max-width: 900px; margin: 120px auto 30px auto; padding: 0 20px; background: none; }
+        .hero-img { width: 100%; max-width: 600px; border-radius: 16px; margin: 30px auto; display: block; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+        h2 { color: #00b4d8; margin-bottom: 10px; border-left: 5px solid #00b4d8; padding-left: 10px; }
+        .machine-img { width: 100%; max-width: 350px; border-radius: 10px; margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        section {
+            background: rgba(25,51,92,0.95);
+            border-radius: 12px;
+            padding: 24px 18px;
+            margin-bottom: 40px;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) forwards;
+        }
+        .section-title, h2 { animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) 0.2s forwards; }
+        section, .machine-img {
+            transition: transform 0.25s cubic-bezier(.77,0,.18,1), box-shadow 0.25s cubic-bezier(.77,0,.18,1);
+        }
+        section:hover, .machine-img:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+            z-index: 2;
+        }
+        nav a {
+            transition: transform 0.18s, background 0.18s;
+        }
+        nav a:hover:not(.active) {
+            transform: scale(1.08);
+            background: #e3f2fd;
+            color: #0072c6;
+        }
+        section:nth-of-type(1), .machine-img:nth-of-type(1) { animation-delay: 0.2s; }
+        section:nth-of-type(2), .machine-img:nth-of-type(2) { animation-delay: 0.4s; }
+        section:nth-of-type(3), .machine-img:nth-of-type(3) { animation-delay: 0.6s; }
+        nav {
+            margin-top: 36px;
+        }
+        .container, header, .main-header {
+            margin-top: 32px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="width: 140px; height: 140px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto;">
+            <img src="Screenshot_2025-06-27_202530-removebg-preview.png" alt="Company Logo" style="width: 140px; height: 140px; object-fit: contain; display: block; margin: auto;">
+        </div>
+        <h1>Braintronics Engineering (Pvt) Ltd</h1>
+    </header>
+    <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="tea-color-sorter.html" class="active">Tea Color Sorter Machines</a>
+        <a href="automation.html">Automation</a>
+        <a href="services.html">Services</a>
+        <a href="director-board.html">Director Board</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1509228468518-c5eeecbff44a?auto=format&fit=crop&w=800&q=80" alt="Tea Color Sorter" class="hero-img">
+        <section>
+            <h2>Anysort Machines</h2>
+            <img src="https://www.anysort.com/uploads/202203/623b1e2e7e7e2.jpg" alt="Anysort Tea Color Sorter" class="machine-img">
+            <p>We supply, install, and maintain Anysort tea color sorter machines, known for their precision and reliability in the tea industry.</p>
+        </section>
+        <section>
+            <h2>Mayor Machines</h2>
+            <img src="https://mayorcolour.com/wp-content/uploads/2021/09/tea-color-sorter.jpg" alt="Mayor Tea Color Sorter" class="machine-img">
+            <p>Mayor tea color sorters offer advanced sorting technology for optimal tea quality and efficiency.</p>
+        </section>
+        <section>
+            <h2>Other Tea Color Sorters</h2>
+            <img src="https://5.imimg.com/data5/SELLER/Default/2022/7/YN/GL/GL/1517266/tea-color-sorter-machine-500x500.jpg" alt="Other Tea Color Sorter" class="machine-img">
+            <p>We also provide a range of other tea color sorter machines to suit your specific requirements.</p>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            el.addEventListener('mouseenter', function() {
+                el.classList.remove('fade-in-up');
+                void el.offsetWidth; // force reflow
+                el.classList.add('fade-in-up');
+            });
+        });
+    </script>
+</body>
+</html> 

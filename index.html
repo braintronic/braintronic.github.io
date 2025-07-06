@@ -1,1 +1,875 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braintronics Engineering (Pvt) Ltd - Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body { font-family: 'Roboto', Arial, sans-serif; margin: 0; background: #102542; color: #f7faff; }
+        header { background: linear-gradient(90deg, #0072c6 60%, #00b4d8 100%); color: #fff; padding: 48px 0 32px 0; text-align: center; position: relative; }
+        .logo {
+            width: 120px; height: 120px; display: inline-block; margin-bottom: 10px;
+        }
+        h1 { margin: 10px 0 5px 0; font-size: 2.5em; letter-spacing: 2px; background: linear-gradient(45deg, #fff, #00b4d8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .section-title { 
+            text-align: center; 
+            font-size: 2.2em; 
+            font-weight: 800; 
+            margin: 60px 0 40px 0; 
+            letter-spacing: 3px; 
+            font-family: 'Roboto', Arial, sans-serif; 
+            animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) 0.2s forwards; 
+            background: linear-gradient(45deg, #c6ff00, #00b4d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #c6ff00, #00b4d8);
+            margin: 15px auto 0 auto;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px rgba(198,255,0,0.3);
+        }
+        /* Services Grid */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-bottom: 40px; background: linear-gradient(135deg, #102542 0%, #18304d 60%, #00b4d8 100%); border-radius: 20px; padding: 32px 0; box-shadow: 0 20px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,180,216,0.08); backdrop-filter: blur(8px); }
+        .service-card { background: rgba(16,37,66,0.7); border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.18); padding: 24px 18px; text-align: center; animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) forwards; border: 1px solid rgba(0,180,216,0.18); backdrop-filter: blur(10px); transition: all 0.3s ease; }
+        .service-card:hover {
+            background: rgba(16,37,66,0.92);
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.28);
+            border: 1px solid #00b4d8;
+        }
+        .service-card img { width: 100px; height: 100px; object-fit: contain; margin-bottom: 12px; }
+        .service-title { font-weight: bold; margin-bottom: 8px; color: #c6ff00; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        .service-desc { font-size: 0.98em; color: rgba(255,255,255,0.8); text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        /* Promo Banner */
+        .promo-banner { background: #8b8fc9; color: #fff; text-align: center; padding: 40px 20px 30px 20px; margin-bottom: 40px; }
+        .promo-banner .big { font-size: 2em; font-weight: bold; line-height: 1.2; letter-spacing: 1px; }
+        .promo-banner .highlight { color: #c6ff00; }
+        .promo-banner .cta-btn { margin-top: 24px; background: #c6ff00; color: #333; border: none; padding: 12px 36px; border-radius: 24px; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+        .promo-banner .cta-btn:hover { background: #b2e600; }
+        /* Why Choose Us */
+        .why-choose { text-align: center; margin-bottom: 40px; }
+        .why-cols { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 40px; 
+            margin-top: 30px; 
+            background: linear-gradient(135deg, #102542 0%, #18304d 60%, #00b4d8 100%);
+            border-radius: 20px; 
+            padding: 32px 0; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,180,216,0.08);
+            backdrop-filter: blur(8px);
+        }
+        .why-col { 
+            flex: 1 1 220px; 
+            min-width: 200px; 
+            max-width: 300px; 
+            background: rgba(16,37,66,0.7); 
+            border-radius: 16px; 
+            padding: 24px 16px; 
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18); 
+            animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) forwards; 
+            border: 1px solid rgba(0,180,216,0.18);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .why-col:hover {
+            background: rgba(16,37,66,0.92);
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.28);
+            border: 1px solid #00b4d8;
+        }
+        .why-icon { 
+            font-size: 2.5em; 
+            color: #c6ff00; 
+            margin-bottom: 10px; 
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .why-title { 
+            font-weight: bold; 
+            margin-bottom: 8px; 
+            color: #c6ff00;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .why-desc { 
+            font-size: 0.98em; 
+            color: rgba(255,255,255,0.8); 
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        /* Welcome Section */
+        .welcome-section { 
+            display: flex; 
+            flex-wrap: wrap; 
+            align-items: center; 
+            background: linear-gradient(135deg, #102542 0%, #18304d 60%, #00b4d8 100%) !important; 
+            color: #f7faff; 
+            border-radius: 20px; 
+            margin-bottom: 40px; 
+            padding: 36px 24px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,180,216,0.08);
+            backdrop-filter: blur(8px);
+        }
+        .welcome-left { flex: 1 1 320px; padding: 36px 24px; }
+        .welcome-title {
+            font-size: 2.4em;
+            font-weight: bold;
+            color: #c6ff00;
+            margin-bottom: 18px;
+            font-family: 'Roboto', Arial, sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) 0.2s forwards;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .welcome-desc-line {
+            font-size: 1.1em;
+            color: #f7faff;
+            margin-bottom: 12px;
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) forwards;
+        }
+        .welcome-desc-line.line1 { animation-delay: 0.7s; }
+        .welcome-desc-line.line2 { animation-delay: 1.2s; }
+        .welcome-desc-line.line3 { animation-delay: 1.7s; }
+        .welcome-btn { background: #c6ff00; color: #333; border: none; padding: 10px 28px; border-radius: 24px; font-size: 1em; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+        .welcome-btn:hover { background: #b2e600; }
+        .welcome-right { flex: 1 1 320px; text-align: center; }
+        .welcome-right img { width: 260px; max-width: 100%; border-radius: 12px; margin: 24px; }
+        /* Team Section */
+        .team-section { margin-bottom: 40px; }
+        .team-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+        .team-card { text-align: center; animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) forwards; }
+        .team-card img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; }
+        .team-name { font-weight: bold; }
+        .team-role { font-size: 0.98em; color: #888; }
+        /* Projects Section */
+        .projects-section { 
+            margin-bottom: 40px; 
+        }
+        .projects-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 20px; 
+            background: linear-gradient(135deg, #102542 0%, #18304d 60%, #00b4d8 100%); 
+            border-radius: 20px; 
+            padding: 32px 0; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,180,216,0.08);
+            backdrop-filter: blur(8px);
+        }
+        .project-img { 
+            width: 100%; 
+            height: 140px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+            border: 1px solid rgba(0,180,216,0.18);
+            transition: all 0.3s ease;
+        }
+        .project-img:hover {
+            transform: scale(1.05);
+            border: 1px solid #00b4d8;
+            box-shadow: 0 8px 25px rgba(0,180,216,0.28);
+        }
+        /* How It Works */
+        .how-section { 
+            margin-bottom: 40px; 
+            background: linear-gradient(135deg, #102542 0%, #18304d 60%, #00b4d8 100%); 
+            border-radius: 20px; 
+            padding: 32px 0; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,180,216,0.08);
+            backdrop-filter: blur(8px);
+        }
+        .how-title { 
+            text-align: center; 
+            font-size: 2.2em; 
+            font-weight: 800; 
+            margin-bottom: 30px; 
+            letter-spacing: 3px; 
+            color: #c6ff00;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            background: linear-gradient(45deg, #c6ff00, #00b4d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .how-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(45deg, #c6ff00, #00b4d8);
+            margin: 12px auto 0 auto;
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(198,255,0,0.3);
+        }
+        .how-steps { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 30px; 
+        }
+        .how-step { 
+            flex: 1 1 200px; 
+            min-width: 180px; 
+            max-width: 240px; 
+            text-align: center; 
+            background: rgba(16,37,66,0.7); 
+            color: #fff; 
+            border-radius: 16px; 
+            padding: 18px 10px; 
+            margin: 10px; 
+            animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) forwards; 
+            border: 1px solid rgba(0,180,216,0.18);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            transition: all 0.3s ease;
+        }
+        .how-step:hover {
+            background: rgba(16,37,66,0.92);
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.28);
+            border: 1px solid #00b4d8;
+        }
+        .how-icon { 
+            font-size: 2.5em; 
+            color: #c6ff00; 
+            margin-bottom: 10px; 
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .how-step-title { 
+            font-weight: bold; 
+            margin-bottom: 8px; 
+            color: #c6ff00;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .how-step-desc { 
+            font-size: 0.98em; 
+            color: rgba(255,255,255,0.8); 
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        @media (max-width: 900px) {
+            .welcome-section { flex-direction: column; }
+            .welcome-right img { margin: 0 auto 24px auto; }
+            .why-cols, .how-steps, .team-grid { flex-direction: column; gap: 20px; }
+        }
+        nav.topnav a {
+            color: #00b4d8;
+            text-decoration: none !important;
+            margin-left: 24px;
+            font-weight: 700;
+            font-size: 1.08em;
+            transition: color 0.2s, background 0.2s;
+        }
+        nav.topnav a.active,
+        nav.topnav a:hover {
+            background: #00b4d8;
+            color: #fff;
+            border-radius: 6px;
+            padding: 6px 16px;
+            font-weight: bold;
+            text-decoration: none !important;
+        }
+        .services-grid, .section-title + .services-grid { background: #1e3a4c; border-radius: 12px; padding: 32px 0; }
+        .service-card, .why-col { background: #fff; color: #222; }
+        .service-title, .why-title { color: #0072c6; }
+        .service-card:nth-child(1) { animation-delay: 0.2s; }
+        .service-card:nth-child(2) { animation-delay: 0.4s; }
+        .service-card:nth-child(3) { animation-delay: 0.6s; }
+        .service-card:nth-child(4) { animation-delay: 0.8s; }
+        .service-card:nth-child(5) { animation-delay: 1.0s; }
+        .service-card:nth-child(6) { animation-delay: 1.2s; }
+        .why-col:nth-child(1) { animation-delay: 0.2s; }
+        .why-col:nth-child(2) { animation-delay: 0.4s; }
+        .why-col:nth-child(3) { animation-delay: 0.6s; }
+        .how-step:nth-child(1) { animation-delay: 0.2s; }
+        .how-step:nth-child(2) { animation-delay: 0.4s; }
+        .how-step:nth-child(3) { animation-delay: 0.6s; }
+        .how-step:nth-child(4) { animation-delay: 0.8s; }
+        .topnav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            background: transparent;
+            box-shadow: none;
+            padding: 18px 36px 0 0;
+            text-align: right;
+            z-index: 10;
+        }
+        @media (max-width: 700px) {
+            .topnav {
+                position: static;
+                padding: 12px 0 0 0;
+                text-align: center;
+            }
+        }
+        
+        /* Tea Banner Styles */
+        .tea-banner {
+            background: linear-gradient(135deg, #102542 0%, #18304d 60%, #00b4d8 100%);
+            border-radius: 20px;
+            margin: 40px 0;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,180,216,0.08);
+            backdrop-filter: blur(8px);
+        }
+        .tea-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,180,216,0.08) 0%, transparent 70%);
+            animation: teaShine 12s linear infinite;
+        }
+        .tea-banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0,180,216,0.04) 0%, rgba(198,255,0,0.01) 100%);
+            pointer-events: none;
+        }
+        .tea-banner-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+        .tea-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+            justify-content: center;
+        }
+        .tea-description {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .tea-main-layout {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 35px;
+            justify-content: space-between;
+        }
+        .tea-features-left {
+            flex: 1;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .tea-image-right {
+            flex: 1;
+            max-width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tea-cta {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .tea-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(0,180,216,0.18), rgba(198,255,0,0.12));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(0,180,216,0.22);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        }
+        .tea-main-icon {
+            font-size: 2.5em;
+            color: #c6ff00;
+            animation: teaIconFloat 3s ease-in-out infinite;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .tea-title-section {
+            flex: 1;
+        }
+        .tea-title {
+            font-size: 2.4em;
+            font-weight: 800;
+            margin-bottom: 5px;
+            letter-spacing: 3px;
+            background: linear-gradient(45deg, #fff, #00b4d8 60%, #c6ff00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: teaTitleGlow 2s ease-in-out infinite alternate;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .tea-subtitle {
+            font-size: 1.1em;
+            color: rgba(255,255,255,0.92);
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .tea-description p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.85);
+            margin: 0;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .tea-feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(16,37,66,0.7);
+            padding: 18px 20px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0,180,216,0.18);
+            transition: all 0.3s ease;
+            animation: teaFeatureSlide 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateX(-30px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        }
+        .tea-feature:hover {
+            background: rgba(16,37,66,0.92);
+            transform: translateX(5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.28);
+            border: 1px solid #00b4d8;
+        }
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00b4d8, #c6ff00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 1px solid #00b4d8;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 15px rgba(0,180,216,0.18);
+        }
+        .feature-icon i {
+            font-size: 1.3em;
+            color: #102542;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            font-weight: bold;
+        }
+        .feature-title {
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #c6ff00;
+            margin-bottom: 3px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .feature-desc {
+            font-size: 0.95em;
+            color: rgba(255,255,255,0.8);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .tea-btn {
+            background: linear-gradient(135deg, #00b4d8, #c6ff00);
+            color: #102542;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 32px rgba(0,180,216,0.18);
+            animation: teaBtnPulse 2s ease-in-out infinite;
+            border: 1px solid #00b4d8;
+            backdrop-filter: blur(8px);
+        }
+        .tea-btn:hover {
+            background: linear-gradient(135deg, #c6ff00, #00b4d8);
+            color: #102542;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(0,180,216,0.28);
+            border: 1.5px solid #c6ff00;
+        }
+        .tea-image-section {
+            flex: 1;
+            text-align: center;
+        }
+        .tea-collage {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.28);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: collageSlide 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+            max-width: 550px;
+            margin: 0 auto;
+            border: 1px solid #00b4d8;
+        }
+        .tea-collage-item {
+            position: absolute;
+            top: 0;
+            width: 25%;
+            height: 100%;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: collageItemSlide 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        .tea-collage-item:nth-child(1) { 
+            left: 0%; 
+            animation-delay: 0.2s; 
+        }
+        .tea-collage-item:nth-child(2) { 
+            left: 25%; 
+            animation-delay: 0.4s; 
+        }
+        .tea-collage-item:nth-child(3) { 
+            left: 50%; 
+            animation-delay: 0.6s; 
+        }
+        .tea-collage-item:nth-child(4) { 
+            left: 75%; 
+            animation-delay: 0.8s; 
+        }
+        @keyframes collageSlide {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes collageItemSlide {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .tea-collage-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .tea-collage-item:hover .tea-collage-img {
+            transform: scale(1.1);
+        }
+        .tea-collage-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0,180,216,0.08), rgba(198,255,0,0.04));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+        .tea-collage-item:hover::before {
+            opacity: 1;
+        }
+        .tea-collage-item::after {
+            content: '🔍';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 2em;
+            color: #fff;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+        .tea-collage-item:hover::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        @media (max-width: 768px) {
+            .tea-main-layout {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .tea-features-left {
+                max-width: 100%;
+                order: 1;
+            }
+            .tea-image-right {
+                max-width: 100%;
+                order: 2;
+            }
+            .tea-collage {
+                width: 100%;
+                height: 250px;
+                max-width: 100%;
+            }
+            .tea-title {
+                font-size: 1.8em;
+            }
+        }
+        @media (max-width: 480px) {
+            .tea-collage {
+                height: 200px;
+            }
+            .tea-collage-item {
+                width: 50%;
+            }
+            .tea-collage-img {
+                height: 200px;
+            }
+        }
+        @keyframes teaIconFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes teaTitleGlow {
+            0% { text-shadow: 0 0 20px rgba(0,180,216,0.18); }
+            100% { text-shadow: 0 0 30px rgba(0,180,216,0.28), 0 0 40px rgba(198,255,0,0.18); }
+        }
+        @keyframes teaBtnPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        @keyframes teaShine {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .tea-feature:nth-child(1) { animation-delay: 0.2s; }
+        .tea-feature:nth-child(2) { animation-delay: 0.4s; }
+        .tea-feature:nth-child(3) { animation-delay: 0.6s; }
+        @keyframes teaFeatureSlide {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .feature-content {
+            flex: 1;
+        }
+        .tea-btn i {
+            transition: transform 0.3s ease;
+        }
+        .tea-btn:hover i {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+    <header style="position: relative;">
+        <nav class="topnav" style="position: absolute; top: 0; right: 0; margin: 0; background: transparent; box-shadow: none; padding: 18px 36px 0 0; text-align: right; z-index: 10;">
+            <a href="index.html" class="active">Home</a>
+            <a href="engineering.html">Engineering</a>
+            <a href="tea-color-sorter.html">Tea Color Sorter Machines</a>
+            <a href="automation.html">Automation</a>
+            <a href="services.html">Services</a>
+            <a href="director-board.html">Director Board</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="logo">
+            <img src="company-logo.png" alt="Company Logo" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <h1>BRAINTRONIC ENGINEERING (PVT) LTD</h1>
+        <div class="slogan">SIMPLE SOLUTIONS FOR COMPLEX CONNECTIONS</div>
+    </header>
+    <div class="container">
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+            <div class="welcome-title">WELCOME TO BRAINTRONIC ENGINEERING</div>
+            <div class="welcome-desc-line line1">Braintronics Engineering (Pvt) Ltd is one of the industrial leaders in Electrical engineering projects and Lightning protection solutions in Sri Lanka.</div>
+            <div class="welcome-desc-line line2">We are fully committed to fulfill your engineering requirement. If you are looking for quality work with excellent communication skills then Braintronics Engineering (Pvt) Ltd is the place for you.</div>
+            <div class="welcome-desc-line line3">Our professional staff will look into your requirement and they will come up with the most suitable solution with minimum expenditure for you.</div>
+        </div>
+        
+        <!-- Tea Color Sorter Banner -->
+        <div class="tea-banner">
+            <div class="tea-banner-content">
+                <div class="tea-header">
+                    <div class="tea-icon-wrapper">
+                        <i class="fa fa-leaf tea-main-icon"></i>
+                    </div>
+                    <div class="tea-title-section">
+                        <div class="tea-title">TEA COLOR SORTER</div>
+                        <div class="tea-subtitle">Advanced Automation Solutions</div>
+                    </div>
+                </div>
+                
+                <div class="tea-description">
+                    <p>Revolutionary color sorting technology for tea factories. Our machines deliver precision, speed, and reliability for optimal tea quality control.</p>
+                </div>
+                
+                <div class="tea-main-layout">
+                    <div class="tea-features-left">
+                        <div class="tea-feature">
+                            <div class="feature-icon">
+                                <i class="fa fa-cogs"></i>
+                            </div>
+                            <div class="feature-content">
+                                <div class="feature-title">High-Speed Processing</div>
+                                <div class="feature-desc">Up to 1000kg/hour sorting capacity</div>
+                            </div>
+                        </div>
+                        <div class="tea-feature">
+                            <div class="feature-icon">
+                                <i class="fa fa-eye"></i>
+                            </div>
+                            <div class="feature-content">
+                                <div class="feature-title">Precision Detection</div>
+                                <div class="feature-desc">Advanced color recognition technology</div>
+                            </div>
+                        </div>
+                        <div class="tea-feature">
+                            <div class="feature-icon">
+                                <i class="fa fa-industry"></i>
+                            </div>
+                            <div class="feature-content">
+                                <div class="feature-title">Factory Integration</div>
+                                <div class="feature-desc">Seamless production line integration</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tea-image-right">
+                        <div class="tea-collage">
+                            <div class="tea-collage-item">
+                                <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=400&q=80" alt="Tea Sorting Machine 1" class="tea-collage-img">
+                            </div>
+                            <div class="tea-collage-item">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=400&q=80" alt="Tea Sorting Machine 2" class="tea-collage-img">
+                            </div>
+                            <div class="tea-collage-item">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=400&q=80" alt="Tea Sorting Machine 3" class="tea-collage-img">
+                            </div>
+                            <div class="tea-collage-item">
+                                <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=400&q=80" alt="Tea Sorting Machine 4" class="tea-collage-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tea-cta">
+                    <a href="tea-color-sorter.html" class="tea-btn">
+                        <span>Explore Solutions</span>
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Why Choose Us -->
+        <div class="section-title">WHY CHOOSE US?</div>
+        <div class="why-cols">
+            <div class="why-col">
+                <div class="why-icon"><i class="fa fa-users"></i></div>
+                <div class="why-title">Professional Staff</div>
+                <div class="why-desc">We are up to date with changing technology and we can assure you the quickest response to your requirement.</div>
+            </div>
+            <div class="why-col">
+                <div class="why-icon"><i class="fa fa-usd"></i></div>
+                <div class="why-title">Affordable Price</div>
+                <div class="why-desc">We provide you the most affordable price and we would not compensate Quality of products while achieving it.</div>
+            </div>
+            <div class="why-col">
+                <div class="why-icon"><i class="fa fa-headphones"></i></div>
+                <div class="why-title">Customer Relationship</div>
+                <div class="why-desc">We are here to build your trust with quality work. Our Staff trained with internationally recommended customer service skills.</div>
+            </div>
+        </div>
+        <!-- How It Works -->
+        <div class="how-section">
+            <div class="how-title">HOW IT WORKS</div>
+            <div class="how-steps">
+                <div class="how-step">
+                    <div class="how-icon"><i class="fa fa-search"></i></div>
+                    <div class="how-step-title">Get Connected</div>
+                    <div class="how-step-desc">Get Connected with our professionals through mail or telephone.</div>
+                </div>
+                <div class="how-step">
+                    <div class="how-icon"><i class="fa fa-calculator"></i></div>
+                    <div class="how-step-title">Get Estimation</div>
+                    <div class="how-step-desc">We will provide you the most suitable quotation for your requirement.</div>
+                </div>
+                <div class="how-step">
+                    <div class="how-icon"><i class="fa fa-file-text"></i></div>
+                    <div class="how-step-title">Purchase Order</div>
+                    <div class="how-step-desc">Give us your legal purchase order along with the advance payment.</div>
+                </div>
+                <div class="how-step">
+                    <div class="how-icon"><i class="fa fa-cogs"></i></div>
+                    <div class="how-step-title">Your service</div>
+                    <div class="how-step-desc">We provide you the installation or the supply as per the given time frame.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Our Services -->
+        <div class="section-title">OUR SERVICES</div>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Repairing & Maintenance">
+                <div class="service-title">Repairing & Maintenance</div>
+                <div class="service-desc">Repairing & Maintenance of Tea & Rice Color Sorters</div>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3062/3062637.png" alt="Manufacturing">
+                <div class="service-title">Manufacturing</div>
+                <div class="service-desc">Manufacturing of Conveyor Lines, Buckets Elevators, Factory automation</div>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3062/3062632.png" alt="Design & Build">
+                <div class="service-title">Design & Build</div>
+                <div class="service-desc">Design & build Capacitor Banks, Control Panels, ATS Panel, Motor Control Panel, Main switch board, Stater Panel</div>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3062/3062635.png" alt="Motor/Transformer Winding">
+                <div class="service-title">Motor/Transformer Winding</div>
+                <div class="service-desc">Repairing of Motor Winding/Transformer Winding</div>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3062/3062636.png" alt="Inspection & Testing">
+                <div class="service-title">Inspection & Testing</div>
+                <div class="service-desc">Inspection of Electrical System, Troubleshooting, Electrical Insulation testing, Wiring and rewiring, Distribution board repair and rewiring etc.</div>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3062/3062633.png" alt="Upgrades & Solar/CCTV">
+                <div class="service-title">Upgrades, Solar & CCTV</div>
+                <div class="service-desc">Service upgrades & Energy audit, Supply & Installation of Off grid & On grid solar System, Supply & Installation of CCTV Systems</div>
+            </div>
+        </div>
+        <!-- Our Projects -->
+        <div class="section-title">OUR PROJECTS</div>
+        <div class="projects-grid">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Project 1" class="project-img">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Project 2" class="project-img">
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Project 3" class="project-img">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Project 4" class="project-img">
+            <img src="https://images.unsplash.com/photo-1509228468518-c5eeecbff44a?auto=format&fit=crop&w=400&q=80" alt="Project 5" class="project-img">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Project 6" class="project-img">
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Braintronics Engineering</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', Arial, sans-serif; margin: 0; background: #102542; color: #f7faff; }
+        header { background: linear-gradient(90deg, #0072c6 60%, #00b4d8 100%); color: #fff; padding: 48px 0 32px 0; text-align: center; margin-top: 60px; }
+        .logo {
+            width: 140px;
+            height: 140px;
+            display: inline-block;
+            margin-bottom: 10px;
+            background-image: url('bt logo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        nav.topnav {
+            width: 100%;
+            background: none;
+            text-align: right;
+            padding: 24px 40px 0 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 100;
+        }
+        nav.topnav a {
+            color: #00b4d8;
+            text-decoration: none !important;
+            margin-left: 24px;
+            font-weight: 700;
+            font-size: 1.08em;
+            transition: color 0.2s, background 0.2s;
+        }
+        nav.topnav a.active,
+        nav.topnav a:hover {
+            background: #00b4d8;
+            color: #fff;
+            border-radius: 6px;
+            padding: 6px 16px;
+            font-weight: bold;
+            text-decoration: none !important;
+        }
+        .container { max-width: 900px; margin: 120px auto 30px auto; padding: 0 20px; background: none; }
+        .hero-img { width: 100%; max-width: 600px; border-radius: 16px; margin: 30px auto; display: block; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+        section {
+            background: rgba(25,51,92,0.95);
+            border-radius: 12px;
+            padding: 24px 18px;
+            margin-bottom: 40px;
+        }
+        h2 { color: #00b4d8; margin-bottom: 10px; border-left: 5px solid #00b4d8; padding-left: 10px; }
+        ul { padding-left: 20px; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) forwards;
+        }
+        .section-title, h2 { animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) 0.2s forwards; }
+        ul li { opacity: 0; animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) forwards; }
+        ul li:nth-child(1) { animation-delay: 0.2s; }
+        ul li:nth-child(2) { animation-delay: 0.4s; }
+        ul li:nth-child(3) { animation-delay: 0.6s; }
+        ul li:nth-child(4) { animation-delay: 0.8s; }
+        ul li:nth-child(5) { animation-delay: 1.0s; }
+        ul li:nth-child(6) { animation-delay: 1.2s; }
+        ul li:nth-child(7) { animation-delay: 1.4s; }
+        ul li:nth-child(8) { animation-delay: 1.6s; }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="width: 140px; height: 140px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto;">
+            <img src="Screenshot_2025-06-27_202530-removebg-preview.png" alt="Company Logo" style="width: 140px; height: 140px; object-fit: contain; display: block; margin: auto;">
+        </div>
+        <h1>Braintronics Engineering (Pvt) Ltd</h1>
+    </header>
+    <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="tea-color-sorter.html">Tea Color Sorter Machines</a>
+        <a href="automation.html">Automation</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="director-board.html">Director Board</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Services" class="hero-img">
+        <section>
+            <h2>What We Offer</h2>
+            <ul>
+                <li>Repairing & Maintenance of Tea & Rice Color Sorters</li>
+                <li>Manufacturing of Conveyor Lines, Buckets Elevators, Factory automation</li>
+                <li>Design & build Capacitor Banks, Control Panels, ATS Panel, Motor Control Panel, Main switch board, Stater Panel</li>
+                <li>Repairing of Motor Winding/Transformer Winding</li>
+                <li>Inspection of Electrical System, Troubleshooting, Electrical Insulation testing, Wiring and rewiring, Distribution board repair and rewiring etc.</li>
+                <li>Service upgrades & Energy audit</li>
+                <li>Supply & Installation of Off grid & On grid solar System</li>
+                <li>Supply & Installation of CCTV Systems</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html> 

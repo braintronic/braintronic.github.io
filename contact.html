@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Braintronics Engineering</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', Arial, sans-serif; margin: 0; background: #102542; color: #f7faff; }
+        header { background: linear-gradient(90deg, #0072c6 60%, #00b4d8 100%); color: #fff; padding: 48px 0 32px 0; text-align: center; margin-top: 60px; }
+        .logo {
+            width: 140px;
+            height: 140px;
+            display: inline-block;
+            margin-bottom: 10px;
+            background-image: url('bt logo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        nav.topnav {
+            width: 100%;
+            background: none;
+            text-align: right;
+            padding: 24px 40px 0 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 100;
+        }
+        nav.topnav a {
+            color: #00b4d8;
+            text-decoration: none;
+            margin-left: 24px;
+            font-weight: 700;
+            font-size: 1.08em;
+            transition: color 0.2s;
+        }
+        nav.topnav a.active,
+        nav.topnav a:hover {
+            background: #00b4d8;
+            color: #fff;
+            border-radius: 6px;
+            padding: 6px 16px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .container { max-width: 1100px; margin: 40px auto 30px auto; padding: 0 20px; }
+        .contact-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: stretch;
+        }
+        .contact-form-col {
+            flex: 1 1 340px;
+            min-width: 320px;
+            max-width: 380px;
+            box-sizing: border-box;
+        }
+        .contact-info-col {
+            flex: 1 1 340px;
+            min-width: 320px;
+            max-width: 420px;
+            box-sizing: border-box;
+            margin-left: 80px;
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form {
+            width: 100%;
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            background: #3a4a65;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 24px;
+        }
+        .contact-form label { display: block; margin-bottom: 6px; font-weight: bold; color: #fff; }
+        .contact-form .input-group { position: relative; margin-bottom: 18px; }
+        .contact-form .input-group input,
+        .contact-form .input-group select,
+        .contact-form .input-group textarea {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            display: block;
+            padding: 10px 36px 10px 36px;
+            border-radius: 6px;
+            border: 1px solid #b0bec5;
+            font-size: 1em;
+            box-sizing: border-box;
+            color: #f7faff;
+            background: #22304a;
+        }
+        .contact-form .input-group .icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #f7faff; font-size: 1.1em; }
+        .contact-form .input-group input::placeholder,
+        .contact-form .input-group textarea::placeholder {
+            color: #b0bec5;
+            opacity: 1;
+        }
+        .contact-form textarea { resize: vertical; min-height: 80px; }
+        .captcha-row { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+        .captcha-img { background: #eee; padding: 8px 18px; font-family: cursive; font-size: 1.5em; border-radius: 6px; }
+        .reload-captcha { cursor: pointer; color: #0072c6; font-size: 1.2em; margin-left: 8px; }
+        .submit-btn { background: #f4a340; color: #fff; border: none; padding: 12px 32px; border-radius: 6px; font-size: 1.1em; font-weight: 700; cursor: pointer; transition: background 0.2s; display: flex; align-items: center; gap: 8px; }
+        .submit-btn:hover { background: #e38b1a; }
+        .contact-info { margin-bottom: 24px; }
+        .contact-info h3 { margin-top: 0; }
+        .contact-info p, .contact-info li { margin: 6px 0; font-size: 1em; }
+        .contact-info ul { padding-left: 20px; }
+        .social-icons { display: flex; gap: 10px; margin: 10px 0 18px 0; }
+        .social-icons a { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: #eee; color: #222; font-size: 1.2em; text-decoration: none; transition: background 0.2s, color 0.2s; }
+        .social-icons a:hover { background: #00b4d8; color: #fff; }
+        .contact-info, .map-embed {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        .map-embed {
+            width: 100%;
+            flex: 1;
+            min-height: 350px;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+        @media (max-width: 900px) {
+            .contact-flex { flex-direction: column; }
+            .contact-form-col, .contact-info-col { max-width: 100%; }
+            .contact-info-col { margin-left: 0; display: block; }
+            .map-embed { min-height: 220px; }
+        }
+        nav.topnav a.active {
+            background: #00b4d8;
+            color: #fff;
+            border-radius: 6px;
+            padding: 6px 16px;
+            font-weight: bold;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) forwards;
+        }
+        .section-title, h2 { animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) 0.2s forwards; }
+        .contact-form { opacity: 0; animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) 0.4s forwards; }
+        .contact-info-col { opacity: 0; animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) 0.7s forwards; }
+        .map-embed { opacity: 0; animation: fadeInUp 1s cubic-bezier(.77,0,.18,1) 1.0s forwards; }
+        .contact-form, .contact-info-col, .map-embed {
+            transition: transform 0.25s cubic-bezier(.77,0,.18,1), box-shadow 0.25s cubic-bezier(.77,0,.18,1);
+        }
+        .contact-form:hover, .contact-info-col:hover, .map-embed:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+            z-index: 2;
+        }
+        nav a {
+            transition: transform 0.18s, background 0.18s;
+        }
+        nav a:hover:not(.active) {
+            transform: scale(1.08);
+            background: #e3f2fd;
+            color: #0072c6;
+        }
+        nav {
+            margin-top: 36px;
+        }
+        .container, header, .main-header {
+            margin-top: 32px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="width: 140px; height: 140px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto;">
+            <img src="Screenshot_2025-06-27_202530-removebg-preview.png" alt="Company Logo" style="width: 140px; height: 140px; object-fit: contain; display: block; margin: auto;">
+        </div>
+        <h1>Braintronics Engineering (Pvt) Ltd</h1>
+    </header>
+    <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="tea-color-sorter.html">Tea Color Sorter Machines</a>
+        <a href="automation.html">Automation</a>
+        <a href="services.html">Services</a>
+        <a href="director-board.html">Director Board</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="contact-flex">
+            <div class="contact-form-col">
+                <h2>Drop us a line</h2>
+                <form class="contact-form">
+                    <label for="inquiry">Inquiry Type :</label>
+                    <div class="input-group">
+                        <span class="icon">&#xf0e8;</span>
+                        <select id="inquiry" name="inquiry">
+                            <option>General Inquiry</option>
+                            <option>Support</option>
+                            <option>Sales</option>
+                        </select>
+                    </div>
+                    <label for="name">Your Name :</label>
+                    <div class="input-group">
+                        <span class="icon">&#xf007;</span>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <label for="email">Your Email :</label>
+                    <div class="input-group">
+                        <span class="icon">&#xf0e0;</span>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <label for="contact">Contact No :</label>
+                    <div class="input-group">
+                        <span class="icon">&#xf095;</span>
+                        <input type="text" id="contact" name="contact">
+                    </div>
+                    <label for="message">Message :</label>
+                    <div class="input-group">
+                        <span class="icon">&#xf040;</span>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <div style="font-size: 0.95em; margin-bottom: 8px;">Just making sure you're not a robot</div>
+                    <div class="captcha-row">
+                        <span class="captcha-img">caroule</span>
+                        <span class="reload-captcha" title="Reload">&#x21bb;</span>
+                        <span>Type the Image Text :</span>
+                        <input type="text" style="width: 120px;">
+                    </div>
+                    <button class="submit-btn" type="submit"><span style="font-family: FontAwesome;">&#xf1d8;</span> Submit</button>
+                </form>
+            </div>
+            <div class="contact-info-col">
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <div style="margin-bottom: 12px;"><b><span class="fa fa-map-marker"></span> Address :</b><br>
+                        No. 190/A, Palliyapitiya, Dunagaha, Gampaha, Sri Lanka.<br>
+                        Postal Code: 11264.
+                    </div>
+                    <div style="margin-bottom: 12px;"><b><span class="fa fa-phone"></span> Hotline :</b><br>
+                        +94 71 1526327
+                    </div>
+                    <div style="margin-bottom: 12px;"><b><span class="fa fa-mobile"></span> Phone :</b><br>
+                        +94 72 0571818 / +94 77 9793106
+                    </div>
+                    <div style="margin-bottom: 12px;"><b><span class="fa fa-envelope"></span> E-mail :</b><br>
+                        braintronicsct@gmail.com
+                    </div>
+                    <div style="margin-bottom: 12px;"><b><span class="fa fa-share-alt"></span> Social Medias :</b><br>
+                        <div class="social-icons">
+                            <a href="#" title="Facebook"><span style="font-family:FontAwesome">&#xf09a;</span></a>
+                            <a href="#" title="LinkedIn"><span style="font-family:FontAwesome">&#xf0e1;</span></a>
+                            <a href="#" title="TikTok"><span style="font-family:FontAwesome">&#xe07b;</span></a>
+                            <a href="#" title="Instagram"><span style="font-family:FontAwesome">&#xf16d;</span></a>
+                        </div>
+                    </div>
+                </div>
+                <iframe class="map-embed" src="https://www.google.com/maps?q=No.+190%2FA%2C+Palliyapitiya%2C+Dunagaha%2C+Gampaha%2C+Sri+Lanka&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- FontAwesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            el.addEventListener('mouseenter', function() {
+                el.classList.remove('fade-in-up');
+                void el.offsetWidth; // force reflow
+                el.classList.add('fade-in-up');
+            });
+        });
+    </script>
+</body>
+</html> 
