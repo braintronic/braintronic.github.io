@@ -7,7 +7,7 @@
 # Form
 # Navigations
 # Animations
-# Mobile Nav
+# Mobile Navsingle
 # Search Popup
 # Page Header
 # Google Map
@@ -10931,7 +10931,7 @@ ul {
 .services-page {
   position: relative;
   display: block;
-  padding: 120px 0 0;
+  padding: 60px 0 0;
 }
 
 .services-page .section-title {
