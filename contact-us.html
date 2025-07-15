@@ -47,7 +47,6 @@
     <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
     <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
     <link rel="stylesheet" href="assets/vendors/free-hand-font/stylesheet.css" />
-    <link rel="stylesheet" href="assets/vendors/nice-select/nice-select.css" />
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/assimox.css" />
@@ -58,7 +57,7 @@
 
     <div class="custom-cursor__cursor"></div>
     <div class="custom-cursor__cursor-two"></div>
-    
+
     <!-- preloader -->
     <div class="loader-wrap">
         <div class="preloader">
@@ -128,13 +127,13 @@
                                         <li>
                                             <a href="about-us.html">About Us</a>
                                         </li>
-                                        <li class="current">
+                                        <li>
                                             <a href="services.html">Services</a>
                                         </li>
                                         <li>
                                             <a href="projects.html">Projects</a>
                                         </li>
-                                        <li>
+                                        <li class="current">
                                             <a href="contact-us.html">Contact Us</a>
                                         </li>
                                     </ul>
@@ -171,10 +170,10 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="page-header__inner">
-                            <h2 class="page-header__title">Services</h2>
+                            <h2 class="page-header__title">Contact Us</h2>
                             <ul class="thm-breadcrumb list-unstyled">
                                 <li><a href="index.html">Home</a></li>
-                                <li>Services</li>
+                                <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -183,178 +182,88 @@
         </section>
         <!--Page Header End-->
 
-        <!--Services Page Start-->
-        <section class="services-page">
+        <!--Contact Page Start-->
+        <section class="contact-page">
             <div class="container">
                 <div class="section-title text-left">
-                    <span class="section-title__tagline">our services</span>
-                    <h2 class="section-title__title">What We Do For Our Customers</h2>
-                    <p class="services-page__sec-title-text">Leverage agile frameworks to provide a robust synopsis for
-                        high level overviews. Iterative approaches to corporate strategy foster collaborative thinking
-                        to further the overall value proposition. Organically grow the holistic world view of disruptive
-                        innovation via workplace.</p>
+                    <span class="section-title__tagline">get in touch</span>
+                    <h2 class="section-title__title">Drop A Message to Us</h2>
+                    <p class="section-title__text">Our objective at Assimox is to bring together our visitor's
+                        societies and spirits with <br> our own, communicating enthusiasm and liberality in the food we
+                        share. </p>
                 </div>
-                <ul class="list-unstyled services-page__list-box">
-                    <!--Services Page Single Start-->
-                    <li class="services-page__list">
-                        <div class="services-page__single">
-                            <div class="services-page__icon">
-                                <span class="icon-refrigerator"></span>
-                            </div>
-                            <h3 class="services-page__title"><a href="single-service.html">Refrigerator</a></h3>
-                            <p class="services-page__text">New normal that has done evolved from generation is on
-                                the runway heading to wards a streamlined.</p>
-                            <div class="services-page__read-more">
-                                <a href="single-service.html">read more <span>+</span></a>
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="contact-page__left">
+                            <form action="assets/inc/sendemail.php" class="contact-page__form contact-form-validated"
+                                novalidate="novalidate">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <div class="contact-page__input-box">
+                                            <input type="text" placeholder="Your name" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <div class="contact-page__input-box">
+                                            <input type="text" placeholder="Your name" name="last-name">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <div class="contact-page__input-box">
+                                            <input type="text" placeholder="Phone Number" name="number">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6">
+                                        <div class="contact-page__input-box">
+                                            <input type="email" placeholder="Subject" name="email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="contact-page__input-box text-message-box">
+                                            <textarea name="message" placeholder="Phone Number"></textarea>
+                                        </div>
+                                        <div class="contact-page__btn-box">
+                                            <button type="submit" class="thm-btn contact-page__btn">Hire us now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="contact-page__right">
+                            <div class="contact-page__content">
+                                <h3 class="contact-page__content-title">Assimox Workshop</h3>
+                                <p class="contact-page__text">2624 Sampson Street,
+                                    <br> Aurora, CO 80014</p>
+                                <h4 class="contact-page__email"><a
+                                        href="mailto:contact@assimox.com">contact@assimox.com</a></h4>
+                                <div class="contact-page__call-box">
+                                    <p class="contact-page__call-sub-title">Call Us at :</p>
+                                    <h4 class="contact-page__call-number"><a href="tel:+18004567890">+ (1800)-
+                                            456-7890</a></h4>
+                                    <p class="contact-page__call-time">Mon - Sat.
+                                        <br> 9.00 am to 5.30 pm
+                                        <br> Sunday Close</p>
+                                </div>
                             </div>
                         </div>
-                    </li>
-                    <!--Services Page Single End-->
-                    <!--Services Page Single Start-->
-                    <li class="services-page__list">
-                        <div class="services-page__single">
-                            <div class="services-page__icon">
-                                <span class="icon-washing-machine"></span>
-                            </div>
-                            <h3 class="services-page__title"><a href="single-service.html">Washing Machine</a></h3>
-                            <p class="services-page__text">New normal that has done evolved from generation is on
-                                the runway heading to wards a streamlined.</p>
-                            <div class="services-page__read-more">
-                                <a href="single-service.html">read more <span>+</span></a>
-                            </div>
-                        </div>
-                    </li>
-                    <!--Services Page Single End-->
-                    <!--Services Page Single Start-->
-                    <li class="services-page__list">
-                        <div class="services-page__single">
-                            <div class="services-page__icon">
-                                <span class="icon-oven"></span>
-                            </div>
-                            <h3 class="services-page__title"><a href="single-service.html">Microwave & Oven</a></h3>
-                            <p class="services-page__text">New normal that has done evolved from generation is on
-                                the runway heading to wards a streamlined.</p>
-                            <div class="services-page__read-more">
-                                <a href="single-service.html">read more <span>+</span></a>
-                            </div>
-                        </div>
-                    </li>
-                    <!--Services Page Single End-->
-                    <!--Services Page Single Start-->
-                    <li class="services-page__list">
-                        <div class="services-page__single">
-                            <div class="services-page__icon">
-                                <span class="icon-water-heater"></span>
-                            </div>
-                            <h3 class="services-page__title"><a href="single-service.html">Water Heater</a></h3>
-                            <p class="services-page__text">New normal that has done evolved from generation is on
-                                the runway heading to wards a streamlined.</p>
-                            <div class="services-page__read-more">
-                                <a href="single-service.html">read more <span>+</span></a>
-                            </div>
-                        </div>
-                    </li>
-                    <!--Services Page Single End-->
-                    <!--Services Page Single Start-->
-                    <li class="services-page__list">
-                        <div class="services-page__single">
-                            <div class="services-page__icon">
-                                <span class="icon-gas"></span>
-                            </div>
-                            <h3 class="services-page__title"><a href="single-service.html">Cookware Stove</a></h3>
-                            <p class="services-page__text">New normal that has done evolved from generation is on
-                                the runway heading to wards a streamlined.</p>
-                            <div class="services-page__read-more">
-                                <a href="single-service.html">read more <span>+</span></a>
-                            </div>
-                        </div>
-                    </li>
-                    <!--Services Page Single End-->
-                    <!--Services Page Single Start-->
-                    <li class="services-page__list">
-                        <div class="services-page__single">
-                            <div class="services-page__icon">
-                                <span class="icon-blender"></span>
-                            </div>
-                            <h3 class="services-page__title"><a href="single-service.html">Juicer Mixer</a></h3>
-                            <p class="services-page__text">New normal that has done evolved from generation is on
-                                the runway heading to wards a streamlined.</p>
-                            <div class="services-page__read-more">
-                                <a href="single-service.html">read more <span>+</span></a>
-                            </div>
-                        </div>
-                    </li>
-                    <!--Services Page Single End-->
-                    <!--Services Page Single Start-->
-                    <li class="services-page__list">
-                        <div class="services-page__single">
-                            <div class="services-page__icon">
-                                <span class="icon-ac"></span>
-                            </div>
-                            <h3 class="services-page__title"><a href="single-service.html">Air Conditioner</a></h3>
-                            <p class="services-page__text">New normal that has done evolved from generation is on
-                                the runway heading to wards a streamlined.</p>
-                            <div class="services-page__read-more">
-                                <a href="single-service.html">read more <span>+</span></a>
-                            </div>
-                        </div>
-                    </li>
-                    <!--Services Page Single End-->
-                    <!--Services Page Single Start-->
-                    <li class="services-page__list">
-                        <div class="services-page__single">
-                            <div class="services-page__icon">
-                                <span class="icon-plumbing"></span>
-                            </div>
-                            <h3 class="services-page__title"><a href="single-service.html">Plumbing</a></h3>
-                            <p class="services-page__text">New normal that has done evolved from generation is on
-                                the runway heading to wards a streamlined.</p>
-                            <div class="services-page__read-more">
-                                <a href="single-service.html">read more <span>+</span></a>
-                            </div>
-                        </div>
-                    </li>
-                    <!--Services Page Single End-->
-                </ul>
-                <div class="services-page__bottom">
-                    <div class="services-page__img float-bob-x">
-                        <img src="assets/images/services/services-page-img-1.png" alt="">
                     </div>
                 </div>
             </div>
         </section>
-        <!--Services Page End-->
+        <!--Contact Page End-->
 
-        <!--Contact Bar Start-->
-        <section class="contact-bar contact-bar-three">
-            <div class="container">
-                <div class="contact-bar__inne">
-                    <div class="contact-bar__bg"
-                        style="background-image: url(assets/images/backgrounds/contact-bar-bg.jpg);"></div>
-                    <div class="contact-bar__left">
-                        <div class="contact-bar__left-icon">
-                            <span class="icon-diagnostic"></span>
-                        </div>
-                        <div class="contact-bar__left-content">
-                            <h3 class="contact-bar__title">Do You Want Free Diagnostics ?</h3>
-                            <p class="contact-bar__text">Get free diagnostics when ording online from our website</p>
-                        </div>
-                    </div>
-                    <div class="contact-bar__right">
-                        <div class="contact-bar__call">
-                            <div class="contact-bar__call-icon">
-                                <img src="assets/images/icon/contact-bar-call-icon.png" alt="">
-                            </div>
-                            <div class="contact-bar__call-content">
-                                <h4 class="contact-bar__call-number"><a href="tel:18004567890">+1800 456 7890</a></h4>
-                                <p class="contact-bar__call-time">Monday - Saturday : 9.30 am - 6.00 pm</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!--Google Map Start-->
+        <section class="contact-page-google-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
+                class="google-map__two" allowfullscreen></iframe>
+
         </section>
-        <!--Contact Bar End-->
+        <!--Google Map End-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
@@ -539,7 +448,6 @@
     <script src="assets/vendors/circleType/jquery.circleType.js"></script>
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
     <script src="assets/vendors/sidebar-content/jquery-sidebar-content.js"></script>
-    <script src="assets/vendors/nice-select/jquery.nice-select.min.js"></script>
     <script src="assets/vendors/tweenmax/TweenMax.min.js"></script>
 
 
