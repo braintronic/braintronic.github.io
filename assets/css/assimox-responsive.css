@@ -300,8 +300,8 @@
     .experience-and-rating__experience {
         padding-left: 15px;
         padding-right: 15px;
-        padding-top: 43px;
-        padding-bottom: 53px;
+        padding-top: 25px;
+        padding-bottom: 30px;
     }
 
     .services-one-top__right {
@@ -1822,5 +1822,61 @@
     .main-menu__left {
         justify-content: space-between;
         flex: 1;
+    }
+}
+
+/* Enhanced responsive styles for Built by Experts section */
+@media only screen and (max-width: 767px) {
+    .experience-and-rating__experience-text-box {
+        min-height: 220px;
+        padding: 30px 20px 20px 20px;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .highlighted-title {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .decorative-line {
+        width: 60px;
+        height: 4px;
+        margin-bottom: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .experience-and-rating__experience-text-box {
+        min-height: 250px;
+        padding: 35px 20px 20px 20px;
+    }
+
+    .highlighted-title {
+        font-size: 2rem;
+        margin-bottom: 14px;
+    }
+
+    .subtitle {
+        font-size: 1.05rem;
+        max-width: 260px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .experience-and-rating__experience-text-box {
+        min-height: 260px;
+        padding: 35px 20px 20px 20px;
+    }
+
+    .highlighted-title {
+        font-size: 2.1rem;
     }
 }

@@ -10,8 +10,8 @@ define("SMTP_PASSWORD", "your_gmail_pass"); // read documentations
 
 
 // Define Recipent Info ||  Who will get this email?
-define("RECIPIENT_NAME", "John Doe");
-define("RECIPIENT_EMAIL", "jhon@mail.com");
+define("RECIPIENT_NAME", "Braintronic");
+define("RECIPIENT_EMAIL", "hellobraintronic@gmail.com");
 
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -46,37 +46,20 @@ try {
 
 	//Content
 	$name = isset($_POST['name']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['name']) : "";
-	$senderEmail = isset($_POST['email']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['email']) : "";
-	$phone = isset($_POST['phone']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['phone']) : "";
-	$services = isset($_POST['services']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['services']) : "";
-	$subject = isset($_POST['subject']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['subject']) : "";
-	$address = isset($_POST['address']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['address']) : "";
-	$website = isset($_POST['website']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['website']) : "";
+	$factoryName = isset($_POST['factory-name']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['factory-name']) : "";
+	$city = isset($_POST['city']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['city']) : "";
+	$machineType = isset($_POST['machine-type']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['machine-type']) : "";
+	$contactNumber = isset($_POST['contact-number']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['contact-number']) : "";
 	$message = isset($_POST['message']) ? preg_replace("/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message']) : "";
 
 	$mail->isHTML(true);                                  //Set email format to HTML
-	$mail->Subject = 'A contact request send by ' . $name;
+	$mail->Subject = 'A contact request sent by ' . $name;
 	$mail->Body    = 'Name: ' . $name . "<br>";
-	$mail->Body .= 'Email: ' . $senderEmail . "<br>";
-
-
-	if ($phone) {
-		$mail->Body .= 'Phone: ' . $phone . "<br>";
-	}
-	if ($services) {
-		$mail->Body .= 'services: ' . $services . "<br>";
-	}
-	if ($subject) {
-		$mail->Body .= 'Subject: ' . $subject . "<br>";
-	}
-	if ($address) {
-		$mail->Body .= 'Address: ' . $address . "<br>";
-	}
-	if ($website) {
-		$mail->Body .= 'Website: ' . $website . "<br>";
-	}
-
-	$mail->Body .= 'message: ' . "<br>" . $message;
+	$mail->Body   .= 'Factory Name: ' . $factoryName . "<br>";
+	$mail->Body   .= 'City: ' . $city . "<br>";
+	$mail->Body   .= 'Machine Type: ' . $machineType . "<br>";
+	$mail->Body   .= 'Contact Number: ' . $contactNumber . "<br>";
+	$mail->Body   .= 'Message: ' . "<br>" . $message;
 
 	$mail->send();
 	echo "<div class='inner success'><p class='success'>Thanks for contacting us. We will contact you ASAP!</p></div><!-- /.inner -->";
