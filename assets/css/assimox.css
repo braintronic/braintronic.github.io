@@ -2406,7 +2406,7 @@ ul {
   -webkit-transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
   transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
   transition: transform 7000ms ease, opacity 1500ms ease-in;
-  transition: transform 7000ms ease, opacity 1500ms ease-in, -webkit-transform 7000ms ease;
+  transition: transform 7000ms ease, opacity 1500ms ease, -webkit-transform 7000ms ease;
   z-index: 1;
 }
 
@@ -2712,7 +2712,7 @@ ul {
   -webkit-transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
   transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
   transition: transform 7000ms ease, opacity 1500ms ease-in;
-  transition: transform 7000ms ease, opacity 1500ms ease-in, -webkit-transform 7000ms ease;
+  transition: transform 7000ms ease, opacity 1500ms ease, -webkit-transform 7000ms ease;
   z-index: 1;
 }
 
@@ -6380,6 +6380,7 @@ ul {
   transition: all 500ms linear;
   transition-delay: 0.1s;
   transform: scale(1);
+  z-index: 2;
 }
 
 .feature-one__single:hover .feature-one__icon::before {
@@ -6394,6 +6395,7 @@ ul {
   transition: all 500ms linear;
   transition-delay: 0.1s;
   transform: scale(1);
+  z-index: 0;
 }
 
 .feature-one__single:hover .feature-one__icon span {
