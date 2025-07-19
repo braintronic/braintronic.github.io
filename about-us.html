@@ -570,6 +570,22 @@
             });
         });
     </script>
+    <script>
+      // Dynamically set 'Contact Us' link in the main navigation
+      document.addEventListener('DOMContentLoaded', function() {
+        // Find the main nav 'Contact Us' link
+        var navLinks = document.querySelectorAll('.main-menu__list a');
+        navLinks.forEach(function(link) {
+          if (link.textContent.trim().toLowerCase() === 'contact us') {
+            if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '') {
+              link.setAttribute('href', '#contact');
+            } else {
+              link.setAttribute('href', 'contact-us.html');
+            }
+          }
+        });
+      });
+    </script>
 </body>
 
 </html>
