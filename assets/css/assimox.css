@@ -4363,7 +4363,7 @@ ul {
 }
 
 .contact-bar__call-number a:hover {
-  color: var(--assimox-base);
+  color: var(--assimox-secondary);
 }
 
 .contact-bar__call-time {
