@@ -6030,6 +6030,7 @@ ul {
   position: relative;
   display: block;
   overflow: hidden;
+  background-color: #067eca;
 }
 
 .vission__left {
@@ -6054,11 +6055,11 @@ ul {
 .vission__right {
   position: relative;
   display: block;
-  float: right;
-  width: 60%;
+  width: 80%;
   background-color: #067eca;
   overflow: hidden;
   z-index: 1;
+  margin: auto;
 }
 
 .vission__bg-img {
@@ -6079,7 +6080,7 @@ ul {
   position: relative;
   display: flex;
   align-items: center;
-  max-width: 778px;
+  /* max-width: 778px; */
   width: 100%;
   float: left;
   padding: 95px 0 98px;
