@@ -1332,21 +1332,21 @@ ul {
 .main-header--dark .main-menu .main-menu__list>li:hover>a,
 .main-header--dark.stricky-header .main-menu__list>li.current>a,
 .main-header--dark.stricky-header .main-menu__list>li:hover>a {
-  color: #11aded;
+  color: var(--assimox-primary);
 }
 
 .main-header--dark .main-menu .main-menu__list>li>ul>li:hover>a,
 .main-header--dark .main-menu .main-menu__list>li>ul>li>ul>li:hover>a,
 .main-header--dark.stricky-header .main-menu__list>li>ul>li:hover>a,
 .main-header--dark.stricky-header .main-menu__list>li>ul>li>ul>li:hover>a {
-  color: #11aded;
+  color: var(--assimox-primary);
 }
 
 .main-header--dark .main-menu .main-menu__list>li>ul,
 .main-header--dark .main-menu .main-menu__list>li>ul>li>ul,
 .main-header--dark.stricky-header .main-menu__list>li>ul,
 .main-header--dark.stricky-header .main-menu__list>li>ul>li>ul {
-  border-color: #11aded;
+  color: var(--assimox-primary);
 }
 
 .main-header--dark .main-menu__call {
@@ -8742,8 +8742,8 @@ ul {
   border: none;
   border-radius: 30px;
   font-size: 15px;
-  background-color: var(--assimox-base);
-  color: var(--assimox-black);
+  background-color: var(--assimox-primary);
+  color: var(--assimox-white);
 }
 
 .contact-page__btn:hover {
