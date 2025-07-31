@@ -11007,7 +11007,7 @@ ul {
   left: 1px;
   width: 36px;
   height: 36px;
-  background-color: var(--assimox-base);
+  background-color: var(--assimox-secondary);
   border-radius: 50%;
   transition: all 500ms linear;
   transition-delay: 0.1s;
