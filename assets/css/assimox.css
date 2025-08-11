@@ -9980,7 +9980,7 @@ ul {
 }
 
 .video-gallery__right-content-btn:before {
-  background-color: var(--assimox-black);
+  background-color: var(--assimox-secondary);
 }
 
 .video-gallery__right-content-btn span {
@@ -10025,8 +10025,8 @@ ul {
   font-family: var(--assimox-font);
   font-size: 20px;
   font-weight: 600;
-  background-color: var(--assimox-base);
-  color: var(--assimox-black);
+  background-color: var(--assimox-black);
+  color: var(--assimox-white);
 }
 
 .video-gallery__download-btn:before {
@@ -10034,7 +10034,7 @@ ul {
 }
 
 .video-gallery__download-btn:hover {
-  color: var(--assimox-white);
+  color: var(--assimox-secondary);
 }
 
 .video-gallery__download-btn span {
@@ -10042,9 +10042,9 @@ ul {
   display: inline-block;
   height: 20px;
   width: 20px;
-  border: 2px solid var(--assimox-black);
+  border: 2px solid var(--assimox-white);
   border-radius: 50%;
-  color: var(--assimox-black);
+  color: var(--assimox-white);
   font-size: 10px;
   text-align: center;
   line-height: 17px;
@@ -10054,8 +10054,8 @@ ul {
 }
 
 .video-gallery__download-btn:hover span {
-  color: var(--assimox-white);
-  border: 2px solid var(--assimox-white);
+  color: var(--assimox-secondary);
+  border: 2px solid var(--assimox-secondary);
 }
 
 /*--------------------------------------------------------------
