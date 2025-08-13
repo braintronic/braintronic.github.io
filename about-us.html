@@ -160,10 +160,22 @@
 
 
         <!--Page Header Start-->
-        <section class="page-header">
+        <section class="page-header" style="position: relative; overflow: hidden;">
             <div class="page-header__bg"
-                style="background-image: url(assets/images/backgrounds/about-us.jpg);"></div>
-            <div class="container">
+                style="
+            background-image: url(assets/images/backgrounds/About-us.jpg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 450px;
+            width: 100vw;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        ">
+            </div>
+            <div class="container" style="position: relative; z-index: 2;">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="page-header__inner">
