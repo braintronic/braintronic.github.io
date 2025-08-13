@@ -572,7 +572,7 @@ ul {
 }
 
 .scroll-to-top:hover {
-  background-color: var(--assimox-base);
+  background-color: var(--assimox-secondary);
 }
 
 .scroll-to-top:hover i {
@@ -1642,7 +1642,7 @@ ul {
 }
 
 .mobile-nav__social a:hover {
-  color: var(--assimox-base);
+  color: var(--assimox-secondary);
 }
 
 .mobile-nav__contact {
@@ -1675,7 +1675,7 @@ ul {
 }
 
 .mobile-nav__contact li a:hover {
-  color: var(--assimox-base);
+  color: var(--assimox-secondary);
 }
 
 .mobile-nav__contact li>i {
@@ -4407,7 +4407,7 @@ ul {
   right: 0;
   bottom: 0;
   content: "";
-  background-color: rgba(2, 24, 57, .90);
+  background-color: rgba(2, 24, 57, .00);
   border-radius: 5px;
   width: 0%;
   transform: translateY(100%);
@@ -4531,7 +4531,7 @@ ul {
 }
 
 .team-one__single:hover .team-one__name a {
-  color: var(--assimox-base);
+  color: var(--assimox-white);
 }
 
 .team-one__subtitle {
@@ -5257,7 +5257,7 @@ ul {
   font-size: 17px;
   font-weight: 400;
   line-height: 26px;
-  color: #696d77;
+  color: #bfc1c7;
   margin-top: 25px;
 }
 
@@ -5294,7 +5294,7 @@ ul {
   display: inline-block;
   font-size: 17px;
   font-weight: 400;
-  color: #696d77;
+  color: #bfc1c7;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   z-index: 1;
@@ -5322,7 +5322,7 @@ ul {
 .footer-widget__newsletter-text {
   font-size: 17px;
   line-height: 22px;
-  color: #696d77;
+  color: #bfc1c7;
 }
 
 .footer-widget__subscribe-box {
@@ -5399,8 +5399,8 @@ ul {
 }
 
 .site-footer__social a:hover {
-  border: 1px solid var(--assimox-base);
-  background-color: var(--assimox-base);
+  border: 1px solid var(--assimox-secondary);
+  background-color: var(--assimox-secondary);
   color: var(--assimox-black);
 }
 
