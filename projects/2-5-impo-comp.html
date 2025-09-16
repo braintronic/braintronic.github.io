@@ -245,9 +245,9 @@
                     <div class="col-xl-6 col-lg-6">
                         <div class="project-details__right">
                             <div class="project-details__img-1">
-                         <img src="../assets/images/projects/block-2/5-1.jpg" alt="Mikvos Compressor Installed at Methum Lanka Rice Mill" width="571" height="465" style="display: block; object-fit: cover; border-radius: 8px;">
+                         <img src="../assets/images/projects/block-2/5-1.jpg" alt="Mikvos Compressor Installed at Neluka Rice Mill" width="571" height="465" style="display: block; object-fit: cover; border-radius: 8px;">
                     <div style="position: absolute; right: 12px; bottom: 12px; background: rgba(0, 32, 64, 0.82); color: #fff; padding: 5px 12px; border-radius: 6px; font-size: 0.98rem; font-family: 'Barlow','Roboto',sans-serif; font-weight: 600; box-shadow: 0 2px 8px #011a3e; letter-spacing: 0.5px;">
-                          Mikvos Compressor Installed at Methum Lanka Rice Mill
+                          Mikvos Compressor Installed at Neluka Rice Mill
                     </div>
                             </div>
                             <div class="project-details__img-box">
@@ -271,13 +271,52 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project-details__img-4">
-                                 <img src="../assets/images/projects/block-2/5-4.jpg" alt=" Mikvos Compressor Installed at Nandana Tea Factory" width="571" height="465" style="display: block; object-fit: cover; border-radius: 8px;">
+
+        <!-- Photo Gallery Start -->
+    <div class="project-details__gallery" style="margin-top: 32px;">
+    <div class="gallery-slider swiper-container">
+        <div class="swiper-wrapper">
+            
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
+                    <img src="../assets/images/projects/block-2/5-4-a.jpg" alt=" Mikvos Compressor Installed at Nandana Tea Factory" width="571" height="465" style="display: block; object-fit: cover; border-radius: 8px;">
                     <div style="position: absolute; right: 12px; bottom: 12px; background: rgba(0, 32, 64, 0.82); color: #fff; padding: 5px 12px; border-radius: 6px; font-size: 0.98rem; font-family: 'Barlow','Roboto',sans-serif; font-weight: 600; box-shadow: 0 2px 8px #011a3e; letter-spacing: 0.5px;">
                         Mikvos Compressor Installed at Nandana Tea Factory
                     </div>
+                </div>
+            </div>
 
-                            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
+                    <img src="../assets/images/projects/block-2/5-4-b.jpg" alt="Mikvos Compressor Installed at Nandana Tea Factory" width="571" height="465" style="display: block; object-fit: cover; border-radius: 8px;">
+                    <div style="position: absolute; right: 12px; bottom: 12px; background: rgba(0, 32, 64, 0.82); color: #fff; padding: 5px 12px; border-radius: 6px; font-size: 0.98rem; font-family: 'Barlow','Roboto',sans-serif; font-weight: 600; box-shadow: 0 2px 8px #011a3e; letter-spacing: 0.5px;">
+                      Mikvos Compressor Installed at Nandana Tea Factory 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <div style="position: relative; display: flex; flex-direction: column; align-items: center;">
+                    <img src="../assets/images/projects/block-2/5-4-c.jpg" alt="Mikvos Compressor Installed at Nandana Tea Factory" width="571" height="465" style="display: block; object-fit: cover; border-radius: 8px;">
+                    <div style="position: absolute; right: 12px; bottom: 12px; background: rgba(0, 32, 64, 0.82); color: #fff; padding: 5px 12px; border-radius: 6px; font-size: 0.98rem; font-family: 'Barlow','Roboto',sans-serif; font-weight: 600; box-shadow: 0 2px 8px #011a3e; letter-spacing: 0.5px;">
+                         Mikvos Compressor Installed at Nandana Tea Factory
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+<!-- Photo Gallery End -->
+
                         </div>
                     </div>
                 </div>
@@ -473,6 +512,21 @@
 
     <!-- template js -->
     <script src="../assets/js/assimox.js"></script>
+    <script>
+    var gallerySwiper = new Swiper('.gallery-slider', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        }
+    });
+</script>
 </body>
 
 </html>
